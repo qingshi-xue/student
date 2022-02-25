@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>注册</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+ 
+ 	<div class="wz">
+ 		<a href="#">首页&ensp;&ensp;&ensp;</a>
+ 		<a href="#">关于系统&ensp;&ensp;&ensp;</a>
+ 		<a href="login.html">登录&ensp;&ensp;&ensp;</a>
+ 		<a href="#">注册</a>
+ 	</div>
+ 
+  <div class="container">
+    <form id="form" class="form" action="login.html" method="get" onsubmit="return CheckAll()">
+      <h2>注册</h2>
+      <div class="form-control">
+        <label for="username">用户名</label>
+        <input type="text" id="username" onblur="checkLength(username,3,15)" placeholder="请输入用户名" />
+        <small>错误提示</small>
+      </div>
+      <div class="form-control">
+        <label for="email">邮箱</label>
+        <input type="text" id="email" onblur="checkEmail(email)" placeholder="请输入邮箱" />
+        <small>错误提示</small>
+      </div>
+      <div class="form-control">
+        <label for="password">密码</label>
+        <input type="password" id="password" onblur=" checkLength(password,6,12)" placeholder="请输入密码" />
+        <small>错误提示</small>
+      </div>
+      <div class="form-control">
+        <label for="password2">确认密码</label>
+        <input type="password" id="password2" onblur="checkPasswordMatch(password,password2);" placeholder="请输入确认密码" />
+        <small>错误提示</small>
+      </div>
+      <input id="zc" type="submit" value="注册" />
+    </form>
+  </div>
+  <script src="js/script.js"></script>
+  
+</body>
+</html>
